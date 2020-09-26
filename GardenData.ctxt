@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=GardenData
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=size
+comment2.target=void\ initializeGarden(int)
+comment3.params=
+comment3.target=boolean\ verifyData()
+comment4.params=newPlant
+comment4.target=boolean\ addPlant(Plant)
+comment5.params=
+comment5.target=java.lang.String\ getPlantData()
+numComments=6
