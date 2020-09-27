@@ -51,13 +51,12 @@ public class TestClass
         that count should be increased only if plant is added.*/
         if(GardenData.addPlant(p3)) // Adding p3 object created while testing phase 1.
         {
-            GardenData.currentCount++;
+            System.out.println("Successfully added.");
         }
         
         if(GardenData.addPlant(p2)) // Adding p2 object created while testing phase 1.
         {
-            GardenData.currentCount++;
-            System.out.println("HI");
+            System.out.println("Successfully added.");
         }    
         System.out.println();
         
