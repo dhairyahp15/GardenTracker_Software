@@ -27,7 +27,7 @@ public class GardenData
     
     public static boolean addPlant(Plant newPlant)
     {
-        if(currentGarden[currentGarden.length-1] != null)
+        if(currentGarden.length == currentCount)
         {
             System.out.println("Warning! Array is already full");
             return false;
@@ -46,7 +46,8 @@ public class GardenData
         for(int i = 0; i < currentCount; i++)
         {
             if(verifyData())
-                result += "Plant: " + currentGarden[i].getName() + " Height: " + currentGarden[i].getHeight() + " Edible: " + currentGarden[i].getEdible() + "\n";
+                result += "Plant: " + currentGarden[i].getName() + "  Height: " + currentGarden[i].getHeight() 
+                + "  Is Edible: " + currentGarden[i].getEdible() + "\n";
         }
         return result;
     }

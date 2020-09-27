@@ -40,7 +40,7 @@ public class TestClass
         GardenData.currentCount++;
         GardenData.currentGarden[1] = new Plant("Basil", 50, true);
         GardenData.currentCount++;
-        GardenData.currentGarden[2] = new Plant("Castor Bean", 450, true);
+        GardenData.currentGarden[2] = new Plant("Castor Bean", 450, false);
         GardenData.currentCount++;
         
         // Testing verify data to check if there are any gaps in the array.
@@ -49,11 +49,16 @@ public class TestClass
         
         /* Adding plant to the last position of the array and making sure 
         that count should be increased only if plant is added.*/
-        if(GardenData.addPlant(p3)); // Adding p3 object created while testing phase 1.
+        if(GardenData.addPlant(p3)) // Adding p3 object created while testing phase 1.
+        {
             GardenData.currentCount++;
-        if(GardenData.addPlant(p2)); // Adding p2 object created while testing phase 1.
+        }
+        
+        if(GardenData.addPlant(p2)) // Adding p2 object created while testing phase 1.
+        {
             GardenData.currentCount++;
-            
+            System.out.println("HI");
+        }    
         System.out.println();
         
         // Printing the entire plant data stored in array until current count.
