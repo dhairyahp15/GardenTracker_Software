@@ -7,8 +7,22 @@ public class GardenData
     
     public static void main(String[] args)
     {
-        System.out.println(getPlantData());
+        // Choosing currentGarden's length arbitrarily and assigning currentCount to 0.
+        currentGarden = new Plant[40];
+        currentCount = 0;
+        currentGarden[0] = new Plant("Basil", 50, true);
+        currentCount++;
+        currentGarden[1] = new Plant("Water Hemlocks", 250, false);
+        currentCount++;
+        
+        // getUserInput plant array variable, this object will reference same object created by getUserInput() method.
         Plant[] userAddedPlants = getUserInput();
+        
+        // adding userAddedPlants to the currentGarden array.
+        addPlants(userAddedPlants);
+        
+        // Printing out the list of plants using printPlantList method.
+        System.out.println(printPlantList(userAddedPlants));
     }
     
     public static void initializeGarden(int size)
@@ -66,7 +80,8 @@ public class GardenData
     {
         Scanner sc = new Scanner(System.in); // Creating scanner variable to get user Input.
         System.out.print("Please enter number of plants you have: ");
-        int getUserInput = sc.nextInt();
+        int getUserInput  = sc.nextInt();
+        sc.nextLine();    
         if(getUserInput <= 0)
         {
             System.out.println("Please enter a valid number, greater than 0.");
@@ -77,7 +92,7 @@ public class GardenData
         
         for(int i = 0; i < getUserInput; i++)
         {
-            System.out.println("Please enter the name of the plant to add: ");
+            System.out.print("Please enter the name of the plant to add: ");
             userAddedPlants[i] = new Plant(sc.nextLine());
         }
         return userAddedPlants;
