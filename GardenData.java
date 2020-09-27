@@ -1,7 +1,7 @@
 public class GardenData
 {
-    private static Plant[] currentGarden; // Plant array which stores differnt plant objects.
-    private static int currentCount; // Counter variable to keep track of number of plants in the garden.
+    public static Plant[] currentGarden; // Plant array which stores differnt plant objects.
+    public static int currentCount; // Counter variable to keep track of number of plants in the garden.
     
     public static void main(String[] args)
     {
