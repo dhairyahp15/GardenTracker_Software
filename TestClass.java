@@ -3,6 +3,11 @@ public class TestClass
     // The main method for the Test class.
     public static void main(String[] args)
     {
+        
+        /*------------------------------- 
+        --------- PHASE 1 TESTS ---------
+        -------------------------------*/
+        
         // Creating several different objects of Plant with different construtors for testing purpose.
         Plant p1 = new Plant();
         Plant p2 = new Plant("Lily");
@@ -30,6 +35,10 @@ public class TestClass
         System.out.println(p1.getHeight());
         System.out.println(p1.getEdible());
         System.out.println();
+        
+        /*------------------------------- 
+        --------- PHASE 2 TESTS ---------
+        -------------------------------*/
         
         // Testing out all the static mehtods of GardenData.
         
@@ -63,5 +72,18 @@ public class TestClass
         // Printing the entire plant data stored in array until current count.
         System.out.println("Plant Data String:");
         System.out.println(GardenTracker.getPlantData());
+        System.out.println();
+        
+        /*------------------------------- 
+        --------- PHASE 3 TESTS ---------
+        -------------------------------*/
+        
+        PlantList plants = new PlantList();
+        for(int i = 0; i < 105; i++)
+        {
+            if(plants.add(new Plant("Plant" + i)));
+            else
+                System.out.println("Warning! Cannot be added, array is already full.");
+        }
     }
 }
