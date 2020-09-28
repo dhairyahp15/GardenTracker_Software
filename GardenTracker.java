@@ -1,6 +1,6 @@
 import java.util.Scanner; // Importing library for Phase 2b. User input.
 
-public class GardenData
+public class GardenTracker
 {
     public static Plant[] currentGarden; // Plant array which stores differnt plant objects.
     public static int currentCount; // Counter variable to keep track of number of plants in the garden.

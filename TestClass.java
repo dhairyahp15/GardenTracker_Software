@@ -33,28 +33,28 @@ public class TestClass
         
         // Testing out all the static mehtods of GardenData.
         
-        GardenData.initializeGarden(4); // Initialized garden size or array size to 4;
+        GardenTracker.initializeGarden(4); // Initialized garden size or array size to 4;
        
         // Adding some initial Plant objects to the array indices by calling out constructors, and increasing counter simultaneously. 
-        GardenData.currentGarden[0] = new Plant("Coriander", 45, true);
-        GardenData.currentCount++;
-        GardenData.currentGarden[1] = new Plant("Basil", 50, true);
-        GardenData.currentCount++;
-        GardenData.currentGarden[2] = new Plant("Castor Bean", 450, false);
-        GardenData.currentCount++;
+        GardenTracker.currentGarden[0] = new Plant("Coriander", 45, true);
+        GardenTracker.currentCount++;
+        GardenTracker.currentGarden[1] = new Plant("Basil", 50, true);
+        GardenTracker.currentCount++;
+        GardenTracker.currentGarden[2] = new Plant("Castor Bean", 450, false);
+        GardenTracker.currentCount++;
         
         // Testing verify data to check if there are any gaps in the array.
-        System.out.println(GardenData.verifyData());
+        System.out.println(GardenTracker.verifyData());
         System.out.println();
         
         /* Adding plant to the last position of the array and making sure 
         that count should be increased only if plant is added.*/
-        if(GardenData.addPlant(p3)) // Adding p3 object created while testing phase 1.
+        if(GardenTracker.addPlant(p3)) // Adding p3 object created while testing phase 1.
         {
             System.out.println("Successfully added.");
         }
         
-        if(GardenData.addPlant(p2)) // Adding p2 object created while testing phase 1.
+        if(GardenTracker.addPlant(p2)) // Adding p2 object created while testing phase 1.
         {
             System.out.println("Successfully added.");
         }    
@@ -62,6 +62,6 @@ public class TestClass
         
         // Printing the entire plant data stored in array until current count.
         System.out.println("Plant Data String:");
-        System.out.println(GardenData.getPlantData());
+        System.out.println(GardenTracker.getPlantData());
     }
 }
