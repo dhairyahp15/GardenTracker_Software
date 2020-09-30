@@ -11,7 +11,7 @@ public class PlantList
     
     public PlantList(Plant[] arr)
     {
-        Plant[] totalPlants = new Plant[arr.length];
+        totalPlants = new Plant[arr.length];
         filledPlants = arr.length;
         for(int i = 0; i < totalPlants.length; i++)
         {
@@ -36,6 +36,11 @@ public class PlantList
         return filledPlants;
     }
     
+    public Plant get(int index)
+    {
+        return totalPlants[index];
+    }
+    
     public void set(int index, Plant data)
     {
         totalPlants[index] = data;
@@ -44,19 +49,26 @@ public class PlantList
     public String toString()
     {
         String result = "The Plant List: [";
-        for(int i = 0; i < filledPlants; i++)
+        if(filledPlants == 0)
         {
-            if(filledPlants == 1)
+            result += "\"There are 0 plant objects.\"]";
+        }
+        else
+        {
+            for(int i = 0; i < filledPlants; i++)
             {
-                result += totalPlants[i].getName() + "]";
-            }
-            else if(i <= filledPlants - 2)
-            {
-                    result += totalPlants[i].getName() + ", ";
-            }
-            else
-            {
+                if(filledPlants == 1)
+                {
                     result += totalPlants[i].getName() + "]";
+                }
+                else if(i <= filledPlants - 2)
+                {
+                    result += totalPlants[i].getName() + ", ";
+                }
+                else
+                {
+                    result += totalPlants[i].getName() + "]";
+                }
             }
         }
         return result;

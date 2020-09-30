@@ -78,12 +78,50 @@ public class TestClass
         --------- PHASE 3 TESTS ---------
         -------------------------------*/
         
-        PlantList plants = new PlantList();
-        for(int i = 0; i < 105; i++)
+        // Testing first constructor.
+        PlantList plants_1 = new PlantList();
+        for(int i = 0; i < 103; i++)
         {
-            if(plants.add(new Plant("Plant" + i)));
+            if(plants_1.add(new Plant("Plant" + i)));
             else
                 System.out.println("Warning! Cannot be added, array is already full.");
         }
+        System.out.println();
+        
+        // Testing second constructor.
+        Plant[] plants = new Plant[10];
+        for(int i = 0; i < plants.length; i++)
+        {
+            plants[i] = new Plant("newPlant" + i);
+        }
+        
+        PlantList plants_2 = new PlantList(plants);
+        
+        System.out.println(plants_2.get(4).getName());
+        System.out.println();
+        
+        System.out.println(plants_2.toString());
+        System.out.println();
+        
+        //Testing out instance methods.
+        PlantList plants_3 = new PlantList();
+        plants_3.add(new Plant("Rose"));
+        System.out.println(plants_3.toString());
+        System.out.println();
+        for(int i = 0; i < 10; i++)
+        {
+            plants_3.add(new Plant("Plant" + 1));
+        }
+        System.out.println(plants_3.toString());
+        System.out.println();
+        
+        System.out.println("Plant object at index 3 will be " + plants_3.get(3).getName());
+        System.out.println();
+        
+        plants_3.set(6, p3);
+        System.out.println(plants_3.toString());
+        System.out.println();
+        
+        System.out.println("Current plant objects filled in the array: " + plants_3.size());
     }
 }
