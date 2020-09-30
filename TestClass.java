@@ -49,6 +49,9 @@ public class TestClass
         //GardenTracker.initializeGarden(4); // Initialized garden size or array size to 4;
        
         // Adding some initial Plant objects to the array indices by calling out constructors, and increasing counter simultaneously. 
+        
+        // Changing my tests because I changed Plant array to PlantList in the GardenTracker, however; every tests has been saved in Git. 
+        
         GardenTracker.addPlant(new Plant("Coriander", 45, true));
         GardenTracker.addPlant(new Plant("Basil", 50, true));
         GardenTracker.addPlant(new Plant("Castor Bean", 450, false));

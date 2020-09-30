@@ -1,34 +1,27 @@
 "----- PHASE 1 TESTS -----"
 
-No Name Plant
-0
-false
+P1: No Name Plant 0 false
 
-Lily
-0
-false
+P2: Lily 0 false
 
-Aloe Vera
-100
-true
+P3: Aloe Vera 100 true
 
-Rose
-92
-true
+P1: Rose 92 true
 
 "----- PHASE 2 TESTS -----"
 
 Verify Data: true
 
 Successfully added.
-Warning! Array is already full.
+Successfully added.
 
 Plant Data String:
-Garden Summary: Current count - 4 Max size - 4
+Garden Summary: Current count - 5 Max size - 100
 Plant: Coriander  Height: 45  Is Edible: true
 Plant: Basil  Height: 50  Is Edible: true
 Plant: Castor Bean  Height: 450  Is Edible: false
 Plant: Aloe Vera  Height: 100  Is Edible: true
+Plant: Lily  Height: 0  Is Edible: false
 
 
 "----- PHASE 3 TESTS -----"

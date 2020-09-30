@@ -2,7 +2,7 @@ import java.util.Scanner; // Importing library for Phase 2b. User input.
 
 public class GardenTracker
 {
-    public static PlantList currentGarden;
+    public static PlantList currentGarden = new PlantList();
     //public static Plant[] currentGarden; // Plant array which stores differnt plant objects.
     //public static int currentCount; // Counter variable to keep track of number of plants in the garden.
     
@@ -15,7 +15,6 @@ public class GardenTracker
         //currentCount++;
         //currentGarden[1] = new Plant("Water Hemlocks", 250, false);
         //currentCount++;
-        currentGarden = new PlantList();
         addPlants(getUserInput());
         System.out.println("\nCurrently filled Plant objects: " + currentGarden.size());
         System.out.println("\nUsing getPlantData():\n" + getPlantData());
