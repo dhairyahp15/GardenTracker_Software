@@ -3,18 +3,9 @@ import java.util.Scanner; // Importing library for Phase 2b. User input.
 public class GardenTracker
 {
     public static PlantList currentGarden = new PlantList();
-    //public static Plant[] currentGarden; // Plant array which stores differnt plant objects.
-    //public static int currentCount; // Counter variable to keep track of number of plants in the garden.
-    
+
     public static void main(String[] args)
     {
-        // Choosing currentGarden's length arbitrarily and assigning currentCount to 0.
-        //currentGarden = new Plant[40];
-        //currentCount = 0;
-        //currentGarden[0] = new Plant("Basil", 50, true);
-        //currentCount++;
-        //currentGarden[1] = new Plant("Water Hemlocks", 250, false);
-        //currentCount++;
         addPlants(getUserInput());
         System.out.println("\nCurrently filled Plant objects: " + currentGarden.size());
         System.out.println("\nUsing getPlantData():\n" + getPlantData());
@@ -33,22 +24,15 @@ public class GardenTracker
         
         System.out.println("\nCurrently filled Plant objects: " + currentGarden.size());
         
-        // getUserInput plant array variable, this object will reference same object created by getUserInput() method.
-        //Plant[] userAddedPlants = getUserInput();
-        
-        // adding userAddedPlants to the currentGarden array.
-        //addPlants(userAddedPlants);
-        
-        // Printing out the list of plants using printPlantList method.
-        //System.out.println(printPlantList(userAddedPlants));
     }
     
-    public static void initializeGarden(int size)
+    /*public static void initializeGarden(int size)
     {
         //currentGarden = new Plant[size];
         //currentCount = 0;
     } // This will create an empty plant array of length size - passed as a parameter and set currentCounter to 0.
-    
+    */
+   
     public static boolean verifyData()
     {
         for(int i = 0; i < currentGarden.size(); i++)
