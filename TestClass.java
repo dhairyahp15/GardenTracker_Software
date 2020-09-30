@@ -1,58 +1,58 @@
 public class TestClass
 {
+    // Creating several different objects of Plant with different construtors for testing purpose.
+    private static Plant p1 = new Plant();
+    private static Plant p2 = new Plant("Lily");
+    private static Plant p3 = new Plant("Aloe Vera", 100, true);
+    
     // The main method for the Test class.
     public static void main(String[] args)
     {
-        
+        phase1_tests();
+        phase2_tests();
+        phase3_tests();
+    }
+    
         /*------------------------------- 
         --------- PHASE 1 TESTS ---------
         -------------------------------*/
         
-        // Creating several different objects of Plant with different construtors for testing purpose.
-        Plant p1 = new Plant();
-        Plant p2 = new Plant("Lily");
-        Plant p3 = new Plant("Aloe Vera", 100, true);
+    public static void phase1_tests()
+    {     
         System.out.println("\"----- PHASE 1 TESTS -----\"");
         System.out.println();
         
         // Testing all the accessor methods, to check the instance variables initialized by constructors.
-        System.out.println(p1.getName());
-        System.out.println(p1.getHeight());
-        System.out.println(p1.getEdible());
+        System.out.println("P1: " + p1.getName() + " " +p1.getHeight() + " " + p1.getEdible());
         System.out.println();
-        System.out.println(p2.getName());
-        System.out.println(p2.getHeight());
-        System.out.println(p2.getEdible());
+        System.out.println("P2: " + p2.getName() + " " +p2.getHeight() + " " + p2.getEdible());
         System.out.println();
-        System.out.println(p3.getName());
-        System.out.println(p3.getHeight());
-        System.out.println(p3.getEdible());
+        System.out.println("P3: " + p3.getName() + " " +p3.getHeight() + " " + p3.getEdible());
         System.out.println();
         
         // Testing all the mutator methods to change the value of the instance variables.
         p1.setName("Rose");
         p1.setHeight(92);
         p1.setEdible(true);
-        System.out.println(p1.getName());
-        System.out.println(p1.getHeight());
-        System.out.println(p1.getEdible());
+        System.out.println("P1: " + p1.getName() + " " +p1.getHeight() + " " + p1.getEdible());
         System.out.println();
-        
+    }
+    
         /*------------------------------- 
         --------- PHASE 2 TESTS ---------
         -------------------------------*/
-        
+    
+    public static void phase2_tests()
+    {
         // Testing out all the static mehtods of GardenData.
         
-        GardenTracker.initializeGarden(4); // Initialized garden size or array size to 4;
+        //GardenTracker.initializeGarden(4); // Initialized garden size or array size to 4;
        
         // Adding some initial Plant objects to the array indices by calling out constructors, and increasing counter simultaneously. 
-        GardenTracker.currentGarden[0] = new Plant("Coriander", 45, true);
-        GardenTracker.currentCount++;
-        GardenTracker.currentGarden[1] = new Plant("Basil", 50, true);
-        GardenTracker.currentCount++;
-        GardenTracker.currentGarden[2] = new Plant("Castor Bean", 450, false);
-        GardenTracker.currentCount++;
+        GardenTracker.addPlant(new Plant("Coriander", 45, true));
+        GardenTracker.addPlant(new Plant("Basil", 50, true));
+        GardenTracker.addPlant(new Plant("Castor Bean", 450, false));
+        
         System.out.println("\"----- PHASE 2 TESTS -----\"");
         System.out.println();
         
@@ -77,10 +77,14 @@ public class TestClass
         System.out.println("Plant Data String:");
         System.out.println(GardenTracker.getPlantData());
         System.out.println();
-        
+    }
+    
         /*------------------------------- 
         --------- PHASE 3 TESTS ---------
         -------------------------------*/
+    
+    public static void phase3_tests()
+    {
         System.out.println("\"----- PHASE 3 TESTS -----\"");
         System.out.println();
         // Testing first constructor.

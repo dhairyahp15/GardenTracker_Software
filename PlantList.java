@@ -2,7 +2,7 @@ public class PlantList
 {
     private int filledPlants = 0;
     private Plant[] totalPlants;
-    private static final int MAX_SIZE = 100;
+    public static final int MAX_SIZE = 100;
     public PlantList()
     {
         totalPlants = new Plant[MAX_SIZE];
@@ -57,19 +57,16 @@ public class PlantList
         {
             for(int i = 0; i < filledPlants; i++)
             {
-                if(filledPlants == 1)
+                if(filledPlants == 1 || i == filledPlants - 1)
                 {
-                    result += totalPlants[i].getName() + "]";
+                    result += totalPlants[i].getName();
                 }
                 else if(i <= filledPlants - 2)
                 {
                     result += totalPlants[i].getName() + ", ";
                 }
-                else
-                {
-                    result += totalPlants[i].getName() + "]";
-                }
             }
+            result += "]";
         }
         return result;
     }
