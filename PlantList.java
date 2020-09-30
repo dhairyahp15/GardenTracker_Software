@@ -51,7 +51,7 @@ public class PlantList
         String result = "The Plant List: [";
         if(filledPlants == 0)
         {
-            result += "\"There are 0 plant objects.\"]";
+            result += "]";
         }
         else
         {

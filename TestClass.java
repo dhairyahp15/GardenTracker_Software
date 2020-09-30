@@ -12,6 +12,8 @@ public class TestClass
         Plant p1 = new Plant();
         Plant p2 = new Plant("Lily");
         Plant p3 = new Plant("Aloe Vera", 100, true);
+        System.out.println("\"----- PHASE 1 TESTS -----\"");
+        System.out.println();
         
         // Testing all the accessor methods, to check the instance variables initialized by constructors.
         System.out.println(p1.getName());
@@ -51,9 +53,11 @@ public class TestClass
         GardenTracker.currentCount++;
         GardenTracker.currentGarden[2] = new Plant("Castor Bean", 450, false);
         GardenTracker.currentCount++;
+        System.out.println("\"----- PHASE 2 TESTS -----\"");
+        System.out.println();
         
         // Testing verify data to check if there are any gaps in the array.
-        System.out.println(GardenTracker.verifyData());
+        System.out.println("Verify Data: " + GardenTracker.verifyData());
         System.out.println();
         
         /* Adding plant to the last position of the array and making sure 
@@ -77,7 +81,8 @@ public class TestClass
         /*------------------------------- 
         --------- PHASE 3 TESTS ---------
         -------------------------------*/
-        
+        System.out.println("\"----- PHASE 3 TESTS -----\"");
+        System.out.println();
         // Testing first constructor.
         PlantList plants_1 = new PlantList();
         for(int i = 0; i < 103; i++)
@@ -96,8 +101,6 @@ public class TestClass
         }
         
         PlantList plants_2 = new PlantList(plants);
-        
-        System.out.println(plants_2.get(4).getName());
         System.out.println();
         
         System.out.println(plants_2.toString());
@@ -105,9 +108,14 @@ public class TestClass
         
         //Testing out instance methods.
         PlantList plants_3 = new PlantList();
+        
+        System.out.println(plants_3.toString());
+        System.out.println();
+        
         plants_3.add(new Plant("Rose"));
         System.out.println(plants_3.toString());
         System.out.println();
+        
         for(int i = 0; i < 10; i++)
         {
             plants_3.add(new Plant("Plant" + 1));
@@ -121,7 +129,7 @@ public class TestClass
         plants_3.set(6, p3);
         System.out.println(plants_3.toString());
         System.out.println();
-        
+
         System.out.println("Current plant objects filled in the array: " + plants_3.size());
     }
 }

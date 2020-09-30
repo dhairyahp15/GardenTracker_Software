@@ -1,0 +1,53 @@
+"----- PHASE 1 TESTS -----"
+
+No Name Plant
+0
+false
+
+Lily
+0
+false
+
+Aloe Vera
+100
+true
+
+Rose
+92
+true
+
+"----- PHASE 2 TESTS -----"
+
+Verify Data: true
+
+Successfully added.
+Warning! Array is already full.
+
+Plant Data String:
+Garden Summary: Current count - 4 Max size - 4
+Plant: Coriander  Height: 45  Is Edible: true
+Plant: Basil  Height: 50  Is Edible: true
+Plant: Castor Bean  Height: 450  Is Edible: false
+Plant: Aloe Vera  Height: 100  Is Edible: true
+
+
+"----- PHASE 3 TESTS -----"
+
+Warning! Cannot be added, array is already full.
+Warning! Cannot be added, array is already full.
+Warning! Cannot be added, array is already full.
+
+
+The Plant List: [newPlant0, newPlant1, newPlant2, newPlant3, newPlant4, newPlant5, newPlant6, newPlant7, newPlant8, newPlant9]
+
+The Plant List: []
+
+The Plant List: [Rose]
+
+The Plant List: [Rose, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1]
+
+Plant object at index 3 will be Plant1
+
+The Plant List: [Rose, Plant1, Plant1, Plant1, Plant1, Plant1, Aloe Vera, Plant1, Plant1, Plant1, Plant1]
+
+Current plant objects filled in the array: 11
