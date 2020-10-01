@@ -34,35 +34,41 @@ public class Plant
     
     // -+-+-+ Accessor Methods for each variable -+-+-+
     
+    // It returns name of the plant.
     public String getName()
     {
         return name;
-    } // returns name.
+    } 
     
+    // This method returns height in centimeter.
     public int getHeight()
     {
         return height;
-    } // returns height in centimeter.
+    } 
     
+     // returns true or false as in edible or not.
     public boolean getEdible()
     {
         return edible;
-    } // returns true or false as in edible or not.
+    }
     
-    // -+-+-+ Accessor Methods for each variable -+-+-+
+    // -+-+-+ Mutator Methods for each variable -+-+-+
     
+    // sets the current name to newName.
     public void setName(String newName)
     {
         name = newName;
-    } // sets the current name to newName.
+    } 
     
+    // sets the current height to the height passsed as a parameter.
     public void setHeight(int height)
     {
         this.height = height;
-    } // sets the current height to the height passsed as a parameter.
+    } 
     
+    // sets current boolean value of edible to newEdible.
     public void setEdible(boolean newEdible)
     {
         edible = newEdible;
-    } // sets current boolean value of edible to newEdible.
+    } 
 }

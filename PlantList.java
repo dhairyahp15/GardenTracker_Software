@@ -1,14 +1,18 @@
 public class PlantList
 {
-    private int filledPlants = 0;
-    private Plant[] totalPlants;
-    public static final int MAX_SIZE = 100;
+    private Plant[] totalPlants; // Plant array which holds plant objects and we can perfom various methods to manipulate this array.
+    private int filledPlants = 0; // private integer variable to keep track of objects stored in totalPlants array.
+    public static final int MAX_SIZE = 100; // Constant variable for the maximum size of the array.
+    
+    // Constructor that initializes the array object to the size of MAX_SIZE.
     public PlantList()
     {
         totalPlants = new Plant[MAX_SIZE];
         filledPlants = 0;
     }
     
+    /* Constructor that accepts plant array and which initializes the PlantList to the same size which refers 
+    different array object but same objects*/
     public PlantList(Plant[] arr)
     {
         totalPlants = new Plant[arr.length];
@@ -19,6 +23,7 @@ public class PlantList
         }
     }
     
+    // The method which used to add Plants to the plant array if It is not already full.
     public boolean add(Plant newPlant)
     {
         if(totalPlants[totalPlants.length - 1] != null)
@@ -31,21 +36,25 @@ public class PlantList
         }
     }
     
+    // This method returns the number of filled plant objects in the array.
     public int size()
     {
         return filledPlants;
     }
     
+    // This method will return the plant object from the array at given index.
     public Plant get(int index)
     {
         return totalPlants[index];
     }
     
+    // This method is used to change the plant object(at given index) in the array using the given Plant object.
     public void set(int index, Plant data)
     {
         totalPlants[index] = data;
     }
     
+    // The following method returns the concatenated string of the name of all the plants stored in the array. 
     public String toString()
     {
         String result = "The Plant List: [";

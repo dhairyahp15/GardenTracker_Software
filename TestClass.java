@@ -90,21 +90,22 @@ public class TestClass
     {
         System.out.println("\"----- PHASE 3 TESTS -----\"");
         System.out.println();
+        
         // Testing first constructor.
         PlantList plants_1 = new PlantList();
         for(int i = 0; i < 103; i++)
         {
-            if(plants_1.add(new Plant("Plant" + i)));
+            if(plants_1.add(new Plant("Plant" + (i+1))));
             else
                 System.out.println("Warning! Cannot be added, array is already full.");
         }
         System.out.println();
         
         // Testing second constructor.
-        Plant[] plants = new Plant[10];
+        Plant[] plants = new Plant[5];
         for(int i = 0; i < plants.length; i++)
         {
-            plants[i] = new Plant("newPlant" + i);
+            plants[i] = new Plant("newPlant" + (i + 1));
         }
         
         PlantList plants_2 = new PlantList(plants);
@@ -116,27 +117,28 @@ public class TestClass
         //Testing out instance methods.
         PlantList plants_3 = new PlantList();
         
-        System.out.println(plants_3.toString());
+        System.out.println(plants_3.toString()); // When no Plant object is stored in the Plant array.
         System.out.println();
         
         plants_3.add(new Plant("Rose"));
-        System.out.println(plants_3.toString());
+        System.out.println(plants_3.toString()); // When one object is stored in the Plant array.
         System.out.println();
         
         for(int i = 0; i < 10; i++)
         {
-            plants_3.add(new Plant("Plant" + 1));
+            plants_3.add(new Plant("Plant" + (i + 1)));
         }
-        System.out.println(plants_3.toString());
+        
+        System.out.println(plants_3.toString()); // After adding 10 more objects to the array.
         System.out.println();
         
-        System.out.println("Plant object at index 3 will be " + plants_3.get(3).getName());
+        System.out.println("Plant object at index 3 will be " + plants_3.get(3).getName() + "."); // Using get method.
         System.out.println();
         
-        plants_3.set(6, p3);
-        System.out.println(plants_3.toString());
+        plants_3.set(6, p3); // Using set method to change the plant object at the given index.
+        System.out.println(plants_3.toString()); // Printing out list to see the changes.
         System.out.println();
 
-        System.out.println("Current plant objects filled in the array: " + plants_3.size());
+        System.out.println("Current plant objects filled in the array: " + plants_3.size()); // Total number of plant objects stored in the array.
     }
 }
