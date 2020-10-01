@@ -140,5 +140,9 @@ public class TestClass
         System.out.println();
 
         System.out.println("Current plant objects filled in the array: " + plants_3.size()); // Total number of plant objects stored in the array.
+        
+        Plant p1 = new Plant("rose");
+        Plant p2 = new Plant("rose");
+        System.out.println(p1.equals(p2));
     }
 }

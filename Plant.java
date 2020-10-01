@@ -71,4 +71,9 @@ public class Plant
     {
         edible = newEdible;
     } 
+    
+    public boolean equals(Plant other)
+    {
+        return (name.equals(other.getName()));
+    }
 }

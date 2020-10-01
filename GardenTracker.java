@@ -15,7 +15,7 @@ public class GardenTracker
         Plant[] p1 = new Plant[10]; // Creating simple plant array to add this method to PlantList plant array.
         for(int i = 0; i < p1.length; i++)
         {
-            p1[i] = new Plant("newPlant" + (i+1));
+            p1[i] = new Plant("newPlant" /*+ (i+1)*/);
         }
         
         addPlants(p1); // Adding above created array to the PlantList plant array. 
@@ -28,6 +28,11 @@ public class GardenTracker
         
         // Printing the total number of the plants objects filled in the plant array of PlantList.
         System.out.println("\nTotal plants in the Garden: " + currentGarden.size());
+        
+        PlantList newPlantList = new PlantList(getUserInput());
+        PlantList p = newPlantList.getUniquePlants();
+        
+        System.out.println("\n" + p.toString());
         
     }
     

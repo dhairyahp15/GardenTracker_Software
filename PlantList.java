@@ -79,4 +79,21 @@ public class PlantList
         }
         return result;
     }
+    
+    public PlantList getUniquePlants()
+    {
+        PlantList result = new PlantList();
+        for(int i = 0; i < filledPlants - 1; i++)
+        {
+            System.out.println(totalPlants[i].getName() + " " +(totalPlants[i+1].getName()));
+            System.out.println(totalPlants[i].equals(totalPlants[i+1]));
+            if(!(totalPlants[i].equals(totalPlants[i+1])))
+            {
+                result.add(totalPlants[i]);
+            }
+        }
+        result.add(totalPlants[filledPlants - 1]);
+        
+        return result;
+    }
 }

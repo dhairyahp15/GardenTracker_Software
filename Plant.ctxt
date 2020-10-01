@@ -2,6 +2,8 @@
 comment0.target=Plant
 comment1.params=
 comment1.target=Plant()
+comment10.params=other
+comment10.target=boolean\ equals(Plant)
 comment2.params=name
 comment2.target=Plant(java.lang.String)
 comment3.params=name\ height\ edible
@@ -18,4 +20,4 @@ comment8.params=height
 comment8.target=void\ setHeight(int)
 comment9.params=newEdible
 comment9.target=void\ setEdible(boolean)
-numComments=10
+numComments=11

@@ -15,4 +15,6 @@ comment6.params=index\ data
 comment6.target=void\ set(int,\ Plant)
 comment7.params=
 comment7.target=java.lang.String\ toString()
-numComments=8
+comment8.params=
+comment8.target=PlantList\ getUniquePlants()
+numComments=9
