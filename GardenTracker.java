@@ -12,14 +12,15 @@ public class GardenTracker
         System.out.println("\nCurrently filled Plant objects: " + currentGarden.size()); // Current number of objects filled in the array
         System.out.println("\nUsing getPlantData():\n" + getPlantData()); // Using getPlantData() method to print plant data from PlantList.
         
-        Plant[] p1 = new Plant[10]; // Creating simple plant array to add this method to PlantList plant array.
+        Plant[] p1 = new Plant[5]; // Creating simple plant array to add this method to PlantList plant array.
         for(int i = 0; i < p1.length; i++)
         {
-            p1[i] = new Plant("newPlant" /*+ (i+1)*/);
+            p1[i] = new Plant("newPlant");
         }
         
         addPlants(p1); // Adding above created array to the PlantList plant array. 
         
+        System.out.println("\nList without removing duplicate plants.");
         // Printing data using getPlantData() after adding array to PlantList.
         System.out.println("\nUsing getPlantData() method after adding Plant Array:\n" + getPlantData());
         
@@ -29,11 +30,11 @@ public class GardenTracker
         // Printing the total number of the plants objects filled in the plant array of PlantList.
         System.out.println("\nTotal plants in the Garden: " + currentGarden.size());
         
-        PlantList newPlantList = new PlantList(getUserInput());
-        PlantList p = newPlantList.getUniquePlants();
+        PlantList newPlantList = currentGarden.getUniquePlants();
         
-        System.out.println("\n" + p.toString());
+        System.out.println("\nList after removing duplicates using getUniquePlant().");
         
+        System.out.println("\n" + newPlantList.toString());
     }
     
     /*public static void initializeGarden(int size)

@@ -80,6 +80,8 @@ public class PlantList
         return result;
     }
     
+    /*This method uses the equals method from the Plant class and checks whether the example plant object already
+       exists in the list or not, which will be used to get Unique plants.*/
     public boolean contains(Plant example)
     {
         boolean result = false;
@@ -91,9 +93,19 @@ public class PlantList
         return result;
     }
     
+    /* This method returns the new plant list which contains each one type of plant object, i.e. list without
+       duplicate elements in it, which uses the contains method to verify if the objects already exists in the 
+       list or not.*/
     public PlantList getUniquePlants()
     {
         PlantList result = new PlantList();
+        for(int i = 0; i < filledPlants; i++)
+        {
+            if(!result.contains(totalPlants[i]))
+            {
+                result.add(totalPlants[i]);
+            }
+        }
         return result;
     }
 }

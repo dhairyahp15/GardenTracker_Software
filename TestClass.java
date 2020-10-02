@@ -143,6 +143,8 @@ public class TestClass
         
         Plant p1 = new Plant("rose");
         Plant p2 = new Plant("rose");
-        System.out.println(p1.equals(p2));
+        
+        //Completed all the tests successfully.
+        System.out.println("\nCompleted all the tests succesfully.");
     }
 }

@@ -72,6 +72,7 @@ public class Plant
         edible = newEdible;
     } 
     
+    // Following method returns true, if the other and the object which called it has the same name.
     public boolean equals(Plant other)
     {
         return (name.equals(other.getName()));
