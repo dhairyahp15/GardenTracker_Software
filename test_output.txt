@@ -31,16 +31,20 @@ Warning! Cannot be added, array is already full.
 Warning! Cannot be added, array is already full.
 
 
-The Plant List: [newPlant0, newPlant1, newPlant2, newPlant3, newPlant4, newPlant5, newPlant6, newPlant7, newPlant8, newPlant9]
+The Plant List: [newPlant1, newPlant2, newPlant3, newPlant4, newPlant5]
 
 The Plant List: []
 
 The Plant List: [Rose]
 
-The Plant List: [Rose, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1, Plant1]
+The Plant List: [Rose, Plant1, Plant2, Plant3, Plant4, Plant5, Plant6, Plant7, Plant8, Plant9, Plant10]
 
-Plant object at index 3 will be Plant1
+Plant object at index 3 will be Plant3.
 
-The Plant List: [Rose, Plant1, Plant1, Plant1, Plant1, Plant1, Aloe Vera, Plant1, Plant1, Plant1, Plant1]
+Changing plant object at index 6 using set method:
+
+The Plant List: [Rose, Plant1, Plant2, Plant3, Plant4, Plant5, Aloe Vera, Plant7, Plant8, Plant9, Plant10]
 
 Current plant objects filled in the array: 11
+
+Completed all the tests succesfully.

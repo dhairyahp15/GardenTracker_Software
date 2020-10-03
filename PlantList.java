@@ -2,7 +2,7 @@ public class PlantList
 {
     private Plant[] totalPlants; // Plant array which holds plant objects and we can perfom various methods to manipulate this array.
     private int filledPlants = 0; // private integer variable to keep track of objects stored in totalPlants array.
-    public static final int MAX_SIZE = 100; // Constant variable for the maximum size of the array.
+    public static final int MAX_SIZE = 100; // Constant variable for the maximum size of the array. It is public because maximum size must be accessed by other classes.
     
     // Constructor that initializes the array object to the size of MAX_SIZE.
     public PlantList()

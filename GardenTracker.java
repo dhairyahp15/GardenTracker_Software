@@ -2,7 +2,9 @@ import java.util.Scanner; // Importing library for Phase 2b. User input.
 
 public class GardenTracker
 {
-    public static PlantList currentGarden = new PlantList();
+    /* Changed the plant array which was created for phase 2 to the PlantList type of object which
+    already contains plant array and methods to manipulate it. */
+    private static PlantList currentGarden = new PlantList();
 
     public static void main(String[] args)
     {

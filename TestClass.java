@@ -135,8 +135,9 @@ public class TestClass
         System.out.println("Plant object at index 3 will be " + plants_3.get(3).getName() + "."); // Using get method.
         System.out.println();
         
+        System.out.println("Changing plant object at index 6 using set method:");
         plants_3.set(6, p3); // Using set method to change the plant object at the given index.
-        System.out.println(plants_3.toString()); // Printing out list to see the changes.
+        System.out.println("\n" + plants_3.toString()); // Printing out list to see the changes.
         System.out.println();
 
         System.out.println("Current plant objects filled in the array: " + plants_3.size()); // Total number of plant objects stored in the array.
